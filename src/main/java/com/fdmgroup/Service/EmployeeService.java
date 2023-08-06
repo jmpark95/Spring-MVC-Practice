@@ -1,6 +1,7 @@
 package com.fdmgroup.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -16,6 +17,9 @@ public class EmployeeService {
 	}
 	
 	
+	public Optional<Employee> getEmployee(Long id) {
+		return employeeRepository.findById(id);
+	}
 	
 	public List<Employee> getAllEmployees() {
 		return employeeRepository.findAll();
@@ -24,4 +28,13 @@ public class EmployeeService {
 	public Employee createEmployee(Employee employee) {
 		return employeeRepository.save(employee);
 	}
+	
+	public Employee updateEmployee(Employee employee) {
+		return employeeRepository.save(employee);
+	}
+	
+	public void deleteEmployee(Long id) {
+		employeeRepository.deleteById(id);
+	}
+
 }

@@ -76,9 +76,4 @@ public class Employee {
 				&& Objects.equals(lastName, other.lastName);
 	}
 	
-	
-	
-	
-	
-	
 }
